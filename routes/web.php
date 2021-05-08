@@ -17,6 +17,10 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', [PagesController::class, 'index']);
 
+Route::get('/weather', function() {
+  return view('weather');
+});
+
 Route::resource('/blog', PostsController::class);
 
 Auth::routes();
